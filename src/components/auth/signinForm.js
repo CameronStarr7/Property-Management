@@ -9,9 +9,24 @@ class SigninForm extends Component {
         return (
             <form className='sign-in-form'>
                 <FormTitle className='sign-in-form_title' text='Login'/>
-                <Field className='sign-in-form_email' component = {FormInput} name='email' type='email'/>
+                <Field 
+                    className="sign-in-form_email"
+                    placeholder="Email" 
+                    name="email"
+                    type="email"
+                    title="Email"
+                    component = {FormInput} 
+                />
+                <Field 
+                    className="sign-in-form_password"
+                    placeholder="Enter Password" 
+                    name="password"
+                    type="password"
+                    title="Password"
+                    component = {FormInput} 
+                />
             </form>
-        )
+        );
     }
 }
 SigninForm = reduxForm({
