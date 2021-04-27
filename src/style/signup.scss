@@ -2,3 +2,29 @@
     grid-row: content-s/content-e;
     grid-column: content-s/content-e;
 }
+
+.sign-up-form {
+    display: grid;
+    justify-items: center;
+
+    &_title {
+        width: 100%;
+        margin-top: 6.6rem;
+    }
+    &_fullname {
+        margin-top: 4rem;
+    }
+
+    &_unit,
+    &_email,
+    &_password {
+        margin-top: 4rem;
+    }
+    
+    &_create-account {
+        margin-top: 8.8rem;
+    }
+    &_text-links {
+        margin-top: 5.2rem;
+    }
+}

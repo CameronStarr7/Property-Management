@@ -23,4 +23,9 @@
     &_text-links {
         margin-top: 5.2rem;
     }
+
+    &_email,
+    &_password {
+        transform: translateX(-64.5px);
+    }
 }
