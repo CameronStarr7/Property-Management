@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as actions from '../../actions';
+
 import SignupForm from './signupForm';
 
 class Signup extends Component {

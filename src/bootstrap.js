@@ -8,7 +8,7 @@ import reducers from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
-import './style/main.scss';
+import '../src/style/main';
 
 import Layout from './components/layout';
 
