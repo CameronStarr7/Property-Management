@@ -1,17 +1,17 @@
 import axios from 'axios';
 
 import { ROOT_URL } from '../config';
-import { AUTHENTICATE_USER } from './types';
+import { 
+    AUTHENTICATE_USER 
+} from './types';
 
 export function signUp(fields, success) {
-    console.log(fields);
-    success()
     return function(dispatch) {
         axios.post(`${ROOT_URL}/signUp`, fields)
             .then(response => {
                 console.log(response);
                 dispatch({
-                type: STORE_USER,
+                type: AUTHENTICATE_USER,
                 payload: response.data
             })
             success();

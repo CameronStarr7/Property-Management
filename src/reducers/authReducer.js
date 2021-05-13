@@ -16,7 +16,6 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 user
             }
-            break;
 
         default: return state;
     }
