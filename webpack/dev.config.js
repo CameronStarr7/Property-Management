@@ -28,6 +28,10 @@ module.exports = webpackMerge(webpackCommon, {
 
   },
 
+  node: {
+    fs: "empty"
+ },
+
   module: {
 
     rules: [
