@@ -16,16 +16,7 @@ import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 import history from './history';
 import requireAuth from "./components/requireAuth";
-
-class Dashboard extends Component {
-  render() {
-    return (
-      <div>
-        hey there
-      </div>
-    )
-  }
-}
+import Dashboard from './componenets/dashboard';
 
 function main() {
   ReactDOM.render(
