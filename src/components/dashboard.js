@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import NewsletterGrid from "./newsletterGrid";
 
 import TabNav from './tabnav';  
+
 
 class Dashboard extends Component {
 
@@ -12,7 +14,7 @@ class Dashboard extends Component {
                 {
                     title: 'Newsletter',
                     active: true,
-                    component: <h4>Hey There - Newsletter</h4>
+                    component: <NewsletterGrid/>
                 },
                 {
                     title: 'Requests',
@@ -23,7 +25,7 @@ class Dashboard extends Component {
         }
     }
     
-    handleTabChange (title) => {
+    handleTabChange = (title) => {
         const tabs = this.state.tabs;
 
         tabs.map(tab => {
