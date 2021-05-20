@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NewsletterGrid from "./newsletterGrid";
+import NewsletterGrid from "./newsletter/newsletterGrid";
 
 import TabNav from './tabnav';  
 
