@@ -5,12 +5,14 @@
     display: grid;
     grid-template-rows: [s] 258px [m] 405px[e];
     grid-template-columns: [s] 1fr [e];
-    justify-items: center;
+
+    border: 1px solid $color-gray-E6;
+    border-radius: .5rem;
 
     &> * {
         grid-column: s/e;
     }
-    
+
     &_title,
     &_image {
         justify-items: center;
@@ -18,6 +20,11 @@
     }
     &_title {
         grid-row: s/m;
+        color: white;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 5rem;
+        text-align: center;
     }
     &_image {
         grid-row: s/m;
@@ -26,7 +33,9 @@
     &_body {
         grid-row: m/e;
         &_p {
-
+            margin:6.3rem 6.05rem;
+            line-height: 2rem;
+            font-size: 1.6rem;
         }
     }
 }
