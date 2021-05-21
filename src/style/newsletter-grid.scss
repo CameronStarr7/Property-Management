@@ -2,7 +2,8 @@
     grid-row: content-s/content-e;
     //height: 100%;
     display: grid;
-    grid-template-rows: [s box-s] 16rem [box-e archive-s] 1fr [archive-e e];
-    grid-template-columns: [box-s archive-s] 16rem [box-e archive-e newsletter-s] 1fr [newsletter-e];
-}
+    grid-template-rows: [s box-s] 16rem [box-e archive-s] 16rem [archive-e] 1fr [e];
+    grid-template-columns: [box-s archive-s] 16rem [box-e archive-e newsletter-s] 960px [newsletter-e];
 
+    justify-content: center;
+}
