@@ -10,13 +10,13 @@ export default function(ComposedComponent) {
                 history.push('/')
             }
         }
-        componentWillUpdate(nextProps) {
+        componentWillUpdate (nextProps) {
             if(!nextProps.authenticated) {
                 history.push('/');
             }
         }
         render() {
-            return <ComposedComponent/>
+            return <ComposedComponent {...this.props}/>
         }
     }
     function mapStateToProps(state) {
