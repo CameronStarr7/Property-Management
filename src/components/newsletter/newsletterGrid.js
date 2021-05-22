@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import NewsletterBox from './newsletterArchive';
 import NewsletterLatest from './newsletterLatest';
+import Button from '../button';
 
 class NewsletterGrid extends Component {
+
+    handleAddNewsletter = () => {
+        this.props.history.push('/newsletter/new');
+    }
     render() {
 
         const latest = {
@@ -15,7 +20,7 @@ class NewsletterGrid extends Component {
 
         return (
             <div className='newsletter-grid'>
-            {/* add button */}
+            <Button className='newsletter-grid_button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
             <NewsletterBox date={new Date()}/> 
             <NewsletterArchive/>
             <NewsletterLatest {...latest}/>

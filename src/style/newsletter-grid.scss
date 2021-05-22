@@ -1,15 +1,19 @@
 .newsletter-grid {
     
     justify-content: center;
-    margin-top: 4.7rem;
     grid-row: content-s/content-e;
 
     display: grid;
-    grid-template-rows: [s box-s] 16rem [box-e archive-s] 16rem [archive-e] 1fr [e];
+    grid-template-rows:[add-s] 4.7rem [add-e] [s box-s] 16rem [box-e archive-s] 16rem [archive-e] 1fr [e];
     grid-template-columns: [box-s archive-s] 16rem [box-e archive-e newsletter-s] 960px [newsletter-e];
 
-    justify-content: center;
-
-    grid-row-gap: 3.85rem;
     grid-column-gap: 6.1rem;
+
+    &_button {
+        grid-row: add-s/add-e;
+        grid-column: latest-s/latest-e;
+        justify-self: end;
+        align-self: center;
+        margin-right: 1rem;
+    }
 }
