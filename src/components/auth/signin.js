@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import actions from 'redux-form/lib/actions';
+import actions from '../../actions';
 import SigninForm from './signinForm';
 
 class Signin extends Component {
 
     onSubmit = (fields) => {
-        console.log('trying to handle submit');
+        this.props.signIn(fields, () => {
+            this.props.history.push('/dashboard');
+        })
     }
     render() {
         return (
