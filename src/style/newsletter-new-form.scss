@@ -7,8 +7,13 @@
         margin-top: 6.6rem;
         grid-column: s/e;
     }
-    &_email {
-        margin-top: 7.7rem;
+    &_newsletter-title,
+    &_body {
+        margin-top: 4.1rem;
         grid-column: input-s/input-e;
+    }
+
+    &_body { 
+        margin-top: 2rem;
     }
 }

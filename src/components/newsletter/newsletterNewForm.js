@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'react-redux';
 
 import { FormTitle } from '../formTitle';
-import { FormInput, FormButton } from '../formField';
-import {TextLink} from '../textLink';
+import { FormInput, FormButton, FormTextArea } from '../formField';
+import {TextLink} from "../textLink";
+
 
 class NewNewsletterForm extends Component {
     render() {
@@ -11,34 +12,24 @@ class NewNewsletterForm extends Component {
         const { handleSubmit } = this.props;
         return (
             <form onSubmit={handleSubmit} className='new-newsletter-form'>
-                <FormTitle className='new-newsletter-form_title' text='Login'/>
+                <FormTitle className='new-newsletter-form_title' text='New Newsletter'/>
                 <Field 
-                    className="new-newsletter-form_email"
-                    placeholder="Email" 
-                    name="email"
-                    type="email"
-                    title="Email"
+                    className="new-newsletter-form_newsletter-title"
+                    placeholder="Newsletter Title"
+                    name="title"
+                    type="text"
+                    title="Newsletter Title"
                     component = {FormInput} 
                 />
                 <Field 
-                    className="new-newsletter-form_password"
-                    placeholder="Enter Password" 
-                    name="password"
-                    type="password"
-                    title="Password"
-                    component = {FormInput} 
+                    className="new-newsletter-form_body"
+                    placeholder="Newsletter Body"
+                    name="body"
+                    type="text"
+                    title="Body"
+                    component = {FormTextArea} 
                 />
-                <Field 
-                    className="new-newsletter-form_login"
-                    name="login"
-                    type="submit"
-                    title="Login"
-                    component = {FormInput} 
-                />
-                <div className='new-newsletter-form_text-links'>
-                    <TextLink to='/forgot' text='Forgot Password'/>
-                    <TextLink to='/signup' text='Not a member? Register here'/>
-                </div>
+                
             </form>
         );
     }
