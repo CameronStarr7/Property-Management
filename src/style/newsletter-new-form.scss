@@ -1,0 +1,14 @@
+.new-newsletter-form {
+    display: grid;
+    grid-template-columns: [s input-s] 1020px [input-e] 1fr[e];
+   
+    &_title {
+        width: 100%;
+        margin-top: 6.6rem;
+        grid-column: s/e;
+    }
+    &_email {
+        margin-top: 7.7rem;
+        grid-column: input-s/input-e;
+    }
+}
