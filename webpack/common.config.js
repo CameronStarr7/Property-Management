@@ -37,7 +37,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new SplitChunksPlugin({
       name: ['app', 'vendor'],

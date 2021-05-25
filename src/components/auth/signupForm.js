@@ -51,7 +51,7 @@ class SignupForm extends Component {
                     name="createaccount"
                     type="submit"
                     title="Create Account"
-                    component = {FormInput} 
+                    component = {FormButton} 
                 />
                 <div className='sign-up-form_text-links'>
                     <TextLink to='/forgot' text='Forgot Password'/>

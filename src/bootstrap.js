@@ -16,7 +16,7 @@ import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 import history from './history';
 import requireAuth from "./components/requireAuth";
-import Dashboard from './componenets/dashboard';
+import Dashboard from './components/dashboard';
 
 function main() {
   ReactDOM.render(

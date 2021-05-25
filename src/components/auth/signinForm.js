@@ -33,7 +33,7 @@ class SigninForm extends Component {
                     name="login"
                     type="submit"
                     title="Login"
-                    component = {FormInput} 
+                    component = {FormButton} 
                 />
                 <div className='sign-in-form_text-links'>
                     <TextLink to='/forgot' text='Forgot Password'/>
