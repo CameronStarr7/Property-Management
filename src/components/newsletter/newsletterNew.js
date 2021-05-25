@@ -5,13 +5,22 @@ import NewNewsletterForm from './newsletterNewForm';
 class NewNewsletter extends Component {  
 
     onSubmit = (fields) => {
-
+        // if(button == 'submit') {
+        //     //save new newsletter on the backend. perform a post request here.
+        //     console.log('trying to handle submit on backend.');
+        // }
+        // this.props.history.push('/dashboard')
+        console.log('trying to submit');
+    }
+    onCancel = () => {
+        // this.props.history.push('/dashboard')
+        console.log('trying to cancel');
     }
 
     render() { 
         return (
             <div className='new-newsletter'>
-                <SigninForm onSubmit={(event) => this.onSubmit(event)}/>
+                <NewNewsletterForm onCancel={() => this.onCancel()} onSubmit={(event) => this.onSubmit(event)}/>
             </div>
         )
     } 
