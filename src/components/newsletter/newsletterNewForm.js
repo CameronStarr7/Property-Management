@@ -47,6 +47,14 @@ class NewNewsletterForm extends Component {
                     component = {FormButton} 
                     onClick={this.props.onCancel}
                 />
+                <Field 
+                    className="new-newsletter-form_image"
+                    small={true}
+                    name="image"
+                    type="file"
+                    title="Image"
+                    component = {FormImage}
+                />
             </form>
         );
     }

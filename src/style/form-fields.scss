@@ -50,9 +50,10 @@
 ///BUTTON
 
 .form-button,
-.form-button-small {
+.form-button-small,
+.form-image {
     &_button,
-    .button {
+    &_replace {
         transition: all .2s ease;
         &:focus {
             outline: none;
@@ -104,6 +105,12 @@
 .form-image {
     display: flex;
     flex-direction: column;
+    grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-e];
+    grid-template-columns: [s] 16rem [e];
+
+    & > * {
+        grid-column: s/e;
+    }
     &_title {
         @include red-title;
         margin-bottom: 2rem;
@@ -112,5 +119,24 @@
         height: 13.7rem;
         width: 16rem;
         border: none;
+        grid-row: image-s/image-e;
+    }
+    &_replace {
+        border-radius: 1.6rem;
+        border: 1px solid white;
+        background-color: rgba(218,218,218);
+
+        width: 13rem;
+        height: 2.4rem;
+    
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        text-align: center;
+    
+        color: $color-red-BA;
+        grid-row: image-s/image-e;
+
+        justify-self: center;
+        align-self: center;
     }
 }
