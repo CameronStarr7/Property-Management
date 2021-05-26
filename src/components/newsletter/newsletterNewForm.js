@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'react-redux';
 
 import { FormTitle } from '../formTitle';
-import { FormInput, FormButton, FormTextArea } from '../formField';
+import { FormInput, FormButton, FormTextArea, FormImage} from '../formField';
 import {TextLink} from "../textLink";
 
 
