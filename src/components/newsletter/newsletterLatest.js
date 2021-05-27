@@ -8,7 +8,7 @@ class NewsletterLatest extends Component {
     }
 
     render() {
-        const { title, imageUrl, body }= this.props;
+        const { title, imageUrl, body, _id }= this.props;
         return (
             <div className='newsletter-latest'>
                 <h1 className='newsletter-latest_title'>{title}</h1>
@@ -21,5 +21,3 @@ class NewsletterLatest extends Component {
         )
     }
 }
-
-export default NewsletterLatest; 
