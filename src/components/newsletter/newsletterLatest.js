@@ -7,11 +7,11 @@ import Button from '../button';
 class NewsletterLatest extends Component {
 
     handleEdit = () => {
-        this.props.history.push('/newsletter/edit');
+        this.props.history.push(`/newsletter/edit/${this.props._id}`);
     }
 
     render() {
-        const { title, imageUrl, body, _id }= this.props;
+        const { title, imageUrl, body}= this.props;
         return (
             <div className='newsletter-latest'>
                 <h1 className='newsletter-latest_title'>{title}</h1>
@@ -29,7 +29,7 @@ function mapStateToProps(state) {
     const { newsletters } = state.newsletters;
     const latestNewsletter = newsletters[0];
     return {
-        ...latestNewsletter
+        ...latestNewsletter 
     }
 }
 export default connect(mapStateToProps)(NewsletterLatest)
