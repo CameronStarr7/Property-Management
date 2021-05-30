@@ -76,7 +76,7 @@ export class FormImage extends Component {
                 <img
                     id='newsletter-new-image'
                     className='form-image__image'
-                    src={imageUrl} 
+                    imageUrl={imageUrl}
                 />
                 <input
                     className='form-image__replace'

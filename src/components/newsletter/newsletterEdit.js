@@ -10,11 +10,11 @@ class EditNewsletter extends Component {
         //     console.log('trying to handle submit on backend.');
         // }
         this.props.history.push('/dashboard');
-    }
+    };
 
     onCancel = () => {
         this.props.history.push('/dashboard')
-    }
+    };
 
     componentDidMount() {
         this.props.fetchNewsletterWithId(this.props.match.params.id);
@@ -40,4 +40,4 @@ function mapStateToProps(state) {
         newsletterToEdit
     }
 }
-export default connect(null, actions)(EditNewsletter);
+export default connect(mapStateToProps, actions)(EditNewsletter);
