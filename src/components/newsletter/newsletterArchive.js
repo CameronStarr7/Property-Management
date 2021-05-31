@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import history from '../../history';
 
-function ArchiveItem({title, date, _id}) {
+function ArchiveItem({title, date, _id, callback}) {
     return (
         <div className='archive-item archive-items__item'>
             <a onClick={() => callback(_id)}  className='archive-item__title'>{title}</a>
