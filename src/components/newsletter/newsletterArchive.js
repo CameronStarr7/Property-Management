@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import history from '../../history';
 
-function ArchiveItem({title, date}) {
+function ArchiveItem({title, date, _id}) {
     return (
-        <div className='archive-item archive-items__item'>  
-            <div className='archive-item__title'>{title}</div>
+        <div className='archive-item archive-items__item'>
+            <a onClick={() => callback(_id)}  className='archive-item__title'>{title}</a>
             <div className='archive-item__date'>
                 { date.getMonth() + 1 }
                 /
@@ -25,7 +26,7 @@ class NewsletterArchive extends Component {
                     {/* newsletter items */}
                     {
                         this.props.newsletters.map(newsletter => {
-                            return <ArchiveItem key={newsletter._id} {...newsletter}/>
+                            return <ArchiveItem callback={() => this.props.history.push(`/newsletter/details/${_id}`)} key={newsletter._id} {...newsletter}/>
                         })
                     }
                 </div>
