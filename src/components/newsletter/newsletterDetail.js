@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-
+import NewsletterBox from './newsletterBox';
 class NewsletterDetail extends Component {
 
     componentDidMount() {
@@ -12,7 +12,9 @@ class NewsletterDetail extends Component {
 
         return (
             <div className='newsletter-detail'>
-                Newsletter Detail
+                Newsletter Detail 
+                <NewsletterBox/>
+                <NewsletterLatest/>
             </div>
         )
     }
