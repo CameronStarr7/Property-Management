@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
 import *as actions from '../../actions';
 
@@ -23,11 +24,19 @@ class NewsletterGrid extends Component {
         return (
             <div className='newsletter-grid'>
             <Button className='newsletter-grid_button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
-            <NewsletterBox/> 
+            <NewsletterBox {...this.props.latestNewsletter}/> 
             <NewsletterArchive/>
-            <NewsletterLatest history={this.props.history} {...latest}/>
+            <NewsletterLatest {...this.props.latestNewsletter} history={this.props.history}/>
             </div>
         )
+    }
+}
+
+function mapStateToProps(state) {
+    const { newsletters } = state.newsletters;
+    const latestNewsletter = newsletters[0];
+    return {
+        latestNewsletter
     }
 }
 

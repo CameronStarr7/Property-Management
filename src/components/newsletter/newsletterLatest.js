@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
 
 import Button from '../button';
+
+import history from '../../history';
 
 class NewsletterLatest extends Component {
 
     handleEdit = () => {
-        this.props.history.push(`/newsletter/edit/${this.props._id}`);
+        history.push(`/newsletter/edit/${this.props._id}`);
     }
 
     
