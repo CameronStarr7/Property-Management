@@ -1,11 +1,10 @@
 .newsletter-grid {
-    
     justify-content: center;
     grid-row: content-s/content-e;
 
     display: grid;
-    grid-template-rows:[add-s] 4.7rem [add-e] [s box-s] 16rem [box-e archive-s] 16rem [archive-e] 1fr [e];
-    grid-template-columns: [box-s archive-s] 16rem [box-e archive-e newsletter-s] 960px [newsletter-e];
+    grid-template-rows:[add-s] 4.7rem [add-e s box-s] 16rem [box-e archive-s] 16rem [archive-e] 1fr [e];
+    grid-template-columns: [box-s archive-s] 16rem [box-e archive-e latest-s] 960px [latest-e];
 
     grid-column-gap: 6.1rem;
 
