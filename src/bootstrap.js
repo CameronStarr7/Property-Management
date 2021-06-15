@@ -29,14 +29,19 @@ function main() {
       <Router history={history}>
         <Switch>
           <Layout>
+          {/*  AUTH */}
             <Route path='/' exact component={Signin}/>
             <Route path='/signin' exact component={Signin}/>
             <Route path='/signup' component={Signup}/>
-
+          {/* DASHBOARD */}
             <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+          {/* NEWSLETTER */}
             <Route path='/newsletter/New' component={requireAuth(NewNewsletter)}/>
             <Route path='/newsletter/Edit/:id' component={requireAuth(EditNewsletter)}/>
             <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
+          {/* REQUESTS */}
+            <Route path='/requests/new' component={requireAuth(NewRequest)}/>
+          
           </Layout>
         </Switch>
       </Router>
