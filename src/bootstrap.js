@@ -34,7 +34,8 @@ function main() {
             <Route path='/signin' exact component={Signin}/>
             <Route path='/signup' component={Signup}/>
           {/* DASHBOARD */}
-            <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+            <Route path='/dashboard' component={Dashboard}/>
+            {/* <Route path='/dashboard' component={requireAuth(Dashboard)}/> */}
           {/* NEWSLETTER */}
             <Route path='/newsletter/New' component={requireAuth(NewNewsletter)}/>
             <Route path='/newsletter/Edit/:id' component={requireAuth(EditNewsletter)}/>
