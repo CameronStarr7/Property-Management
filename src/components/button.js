@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({callback, text, icon, className }) {
+function Button({className, callback, text, icon}) {
     if(icon) {
         return (
             <a onClick={callback} className={`${className} button`}>
