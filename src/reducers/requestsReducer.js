@@ -7,10 +7,9 @@ const INITIAL_STATE = {
     selectedRequests: 'pending'
 }
 
-
 export default function(state = INITIAL_STATE, action) {
     switch (action, type) {
-        case AUTHENTICATE_USER:
+        case CHANGE_SELECTED_REQUEST_TYPE:
             const boxType = action.payload;
             return {
                 ...state,
