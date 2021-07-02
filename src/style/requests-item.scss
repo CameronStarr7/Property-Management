@@ -48,5 +48,42 @@
               
     }
     
+}
+
+.requests-item {
+    &_icon {
+        font-size: 3rem;
+    }
+    &_title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.3rem;
+    }
+    &_tenant-unit {
+        color: $color-red-BA;
+        font-family: $font-encode-cond;
+        font-size: 1.3rem;
+        line-height: 1.6rem;;
+    }
+    &_arrow {
+        color: $color-gray-4D;
+        font-size: 3rem;
+    }
+    &_date {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    &_move {
+        
+    }
+    &_description {
+
+    }
+    &_description-img {
+
+    }
+    &_descripion-text {
+              
+    }
     
 }
