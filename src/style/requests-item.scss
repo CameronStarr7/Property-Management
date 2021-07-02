@@ -1,24 +1,52 @@
 .requests-item {
     display: grid;
-    grid-template-rows: [title-s] 40px [title-e tenant-s] 40px [tenant-e description-s] 1fr [description-e];
-    grid-template-columns: [icon-s] 68px [icon-e title-s] 1fr [title-e arrow-s] 68px [arrow-e date -s] 100px [date-e]
+    grid-template-rows: [s title-s] 34px [title-e tenant-s] 34px [tenant-e description-s] 147px [description-e e];
+    grid-template-columns: [icon-s] 68px [icon-e s title-s] minmax(40px, 1fr) [title-e arrow-s] 68px [arrow-e date-s] 100px [date-e];
+   
+    align-items: center;
+
     &_icon {
-        
+        grid-column: icon-s/icon-e;
+        grid-row: s/e;
+        justify-content: center;
+        background-color: cornflowerblue;
     }
     &_title {
-        
+        grid-column: title-s/title-e;
+        grid-row: title-s/title-e;
     }
     &_tenant-unit {
-        
+        grid-column: title-s/title-e;
+        grid-row: tenant-s/tenant-e;
     }
     &_arrow {
-        
+        grid-column: arrow-s/arrow-e;
+        grid-row:  title-s/title-e;
     }
     &_date {
-        
+        grid-column: date-s/date-e;
+        grid-row: s/e;
+        text-align: right;
     }
     &_move {
-        
+        grid-column: date-s/date-e;
+        grid-row: s/e;
+        display: none;
     }
-}
+    &_description {
+        grid-column: s/e;
+        grid-row: description-s/description-e;
 
+        display: grid;
+        grid-column-gap: 4rem;
+        grid-auto-flow: column;
+    }
+    &_description-img {
+
+    }
+    &_descripion-text {
+              
+    }
+    
+    
+}
