@@ -17,9 +17,22 @@ class RequestsItem extends Component {
                 </div>
                 <Icon className='requests-item_arrow' icon='fas fa-sort-down'/>
                 <div className='requests-item_date'>
-                    April 6t
+                    04/06/1997
                 </div>
                 <Button className='requests-item_move' icon='fas fa-wrench' callback={() => }/>
+
+                <div className='requests-item_description'>
+                    <img 
+                        className='requests-item_description-img'
+                        src = 'http://via.placeholder.com/'
+                    />
+                    <p className='requests-item_description-text'>
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    </p>
+                </div>
             </div>
         )
     }

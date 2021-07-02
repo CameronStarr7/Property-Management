@@ -1,4 +1,24 @@
 .requests-item {
-    color: blue;
+    display: grid;
+    grid-template-rows: [title-s] 40px [title-e tenant-s] 40px [tenant-e description-s] 1fr [description-e];
+    grid-template-columns: [icon-s] 68px [icon-e title-s] 1fr [title-e arrow-s] 68px [arrow-e date -s] 100px [date-e]
+    &_icon {
+        
+    }
+    &_title {
+        
+    }
+    &_tenant-unit {
+        
+    }
+    &_arrow {
+        
+    }
+    &_date {
+        
+    }
+    &_move {
+        
+    }
 }
 
