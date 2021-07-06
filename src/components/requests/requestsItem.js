@@ -10,7 +10,8 @@ class RequestsItem extends Component {
             <div className='requests-item'>
                 <Icon className='requests-item_icon' icon='fas fa-exclamation-triangle'/>
                 <div className='requests-item_title'>
-                    My door needs fixing.
+                    <div className='requests-item_title_text'>My door needs fixing.</div>
+                    <Icon className='requests-item_title_arrow' icon='fas fa-sort-down'/>
                 </div>
                 <div className='requests-item_tenant-unit'>
                     Max - Unit 115

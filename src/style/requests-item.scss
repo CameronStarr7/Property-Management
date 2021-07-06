@@ -12,16 +12,17 @@
         background-color: cornflowerblue;
     }
     &_title {
+        align-self: start;
         grid-column: title-s/title-e;
         grid-row: title-s/title-e;
+
+        display: flex;
+        flex-direction: row;
     }
     &_tenant-unit {
+        align-self: start;
         grid-column: title-s/title-e;
         grid-row: tenant-s/tenant-e;
-    }
-    &_arrow {
-        grid-column: arrow-s/arrow-e;
-        grid-row:  title-s/title-e;
     }
     &_date {
         grid-column: date-s/date-e;
@@ -48,9 +49,16 @@
         font-size: 3rem;
     }
     &_title {
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 2.3rem;;
+        &_text {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2.3rem;
+            margin-right: 2rem;
+        }   
+        &_arrow {
+            color: $color-gray-4D;
+            font-size: 3rem;
+        }
     }
     &_tenant-unit {
         color: $color-red-BA;
@@ -58,10 +66,7 @@
         font-size: 1.3rem;
         line-height: 1.6rem; 
     }
-    &_arrow {
-        color: $color-gray-4D;
-        font-size: 3rem;
-    }
+ 
     &_date {
         font-size: 1.4rem;
         line-height: 1.7rem;
@@ -70,7 +75,7 @@
 
     }
     &_description {
-
+    
     }
     &_description-img {
 
