@@ -35,12 +35,12 @@
     &_move {
         grid-column: date-s/date-e;
         grid-row: s/e;
-        display: none;
+        justify-self: end;
     }
     &_description {
-        grid-column: s/e;
-        grid-row: description-s/description-e;
-
+        grid-column: date-s/date-e;
+    }
+    .item-description {
         display: grid;
         grid-column-gap: 4rem;
         grid-auto-flow: column;
@@ -48,10 +48,8 @@
 }
 
 .requests-item {
-    padding: 6px 0px;
-    &:hover {
-        background-color: $color-gray-F8;
-    }
+    transition: all .3s ease;
+
     &_icon {
         font-size: 2.7rem;
     }
@@ -75,22 +73,40 @@
     }
  
     &_date {
+        transition: all .3s ease;
         font-size: 1.4rem;
         line-height: 1.7rem;
     }
     &_move {
+        transition: all .3s ease;
+        transform: translateX(100px);
+        opacity: 0;
 
+        &:hover {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
-    &_description {
-        margin-top: 1rem;
+    .item-description {
+        margin-top: 1.4rem;
         margin-bottom: 1rem;
     }
-    &_description-img {
-
+    &_img {
+        object-fit: cover;
     }
-    &_descripion-text {
+    &_text {
         font-size: 1.4rem;
         line-height: 1.7rem;
     }
-    
+}
+
+&:hover {
+    background-color: $color-gray-F8;
+    .requests-item_move {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .requests-item_date {
+        transform: translate(-100px);
+    }
 }

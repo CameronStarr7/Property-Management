@@ -16,6 +16,7 @@ class RequestsItem extends Component {
     }
 
     toggleDropdown = () => {
+        var element = document.getElementById('requests-item');
         if(this.state.height == 0) {
             this.setState({height: 'auto'})
         } else {
@@ -25,7 +26,7 @@ class RequestsItem extends Component {
 
     render() {
         return (
-            <div className='requests-item'>
+            <div id='requests-item' className='requests-item'>
                 <Icon className='requests-item_icon' icon='fas fa-exclamation-triangle'/>
                 <div className='requests-item_title'>
                     <div className='requests-item_title_text'>My door needs fixing.</div>
@@ -46,12 +47,12 @@ class RequestsItem extends Component {
                         duration={300}
                         height={100}
                     >
-                        <div className='requests-item_description'>
+                        <div className='item-description'>
                             <img 
-                                className='requests-item_description-img'
+                                className='item_description_img'
                                 src = 'http://via.placeholder.com/'
                             />
-                            <p className='requests-item_description-text'>
+                            <p className='item_description_text'>
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
