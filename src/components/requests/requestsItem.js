@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Icon from '../icon';
-import Button from '../button';
+import Icon from '../../icon';
+import Button from '../../button';
 
 import AnimateHeight from 'react-animate-height';
 

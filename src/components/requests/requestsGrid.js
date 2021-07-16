@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Button from '../button';
+import Button from '../../button';
 
 import RequestsBoxes from './requestsBoxes';
 import Requests from './requests';
