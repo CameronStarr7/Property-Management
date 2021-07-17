@@ -29,7 +29,7 @@ class NewRequest extends Component {
                 fieldTwoPlaceholder='Description Here'
                 fieldTwoTitle='Description'
                 />
-            </div> 
+            </div>  
         );
     } 
 }
