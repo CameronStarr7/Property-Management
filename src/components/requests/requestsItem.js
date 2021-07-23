@@ -40,7 +40,7 @@ class RequestsItem extends Component {
                     04/06/1997
                 </div>
 
-                <Button className='requests-item_move' icon='fas fa-wrench' callback={() => }/>
+                <Button className='requests-item_move' icon='fas fa-wrench' callback={() => } />
 
                 <div className='requests-item_description'>
                     <AnimateHeight

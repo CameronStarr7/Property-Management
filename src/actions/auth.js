@@ -24,7 +24,7 @@ export function signUp(fields, success) {
             })
     }
 }
-export function signin(fields, success) {
+export function signIn(fields, success) {
     return function (dispatch) {
         axios.post(`${ROOT_URL}/signIn`, fields)
             .then(response => {

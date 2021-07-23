@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
  
 import NewNewsletterForm from '../newsletter/newsletterNewForm';
 
@@ -9,13 +12,15 @@ class NewRequest extends Component {
         //     //save new newsletter on the backend. perform a post request here.
         //     console.log('trying to handle submit on backend.');
         // }
-        this.props.history.push('/dashboard');
-    }
+        this.props.createNewRequest(this.props._id, {}, () => {
+            this.props.history.push('/dashboard');
+        })
+
+    };
 
     onCancel = () => {
-        // this.props.history.push('/dashboard')
-        console.log('trying to cancel');
-    }
+        this.props.history.push('/dashboard')
+    };
 
     render() { 
         return (
@@ -33,5 +38,11 @@ class NewRequest extends Component {
         );
     } 
 }
+function mapStateToProps(state) {
+    const { _id } = state.auth.user;
+    return { _id }
+}
 
-export default NewNewsletter;
+NewRequest = connect(mapStateToProps, actions)(NewRequest);
+
+export default NewRequest;
