@@ -4,7 +4,7 @@ import { reduxForm, Field } from 'react-redux';
 import { FormTitle } from '../formTitle';
 import { FormInput, FormButton, FormTextArea, FormImage} from '../formField';
 
-class NewNewsletterForm extends Component {
+class  NewNewsletterForm extends Component {
     render() {
 
         const { handleSubmit, formTitle, newsletterEdit } = this.props;
