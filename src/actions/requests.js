@@ -25,9 +25,25 @@ export function createNewRequest(userId, formData, success) {
                 authorization: token
             }
         })
-            then(response => {
+            .then(response => {
                 console.log(response.data);
                 success(); 
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
+export function fetchRequests() {
+    const token = localStorage.getItem('token');
+    return function() {
+        axios.get(`${ROOT_URL}/requests`, {
+            headers: { authorization: token }
+        })
+            .then(response => {
+                console.log(response.data);
+                //dispatch an action to set our requests
             })
             .catch(err => {
                 console.log(err);
