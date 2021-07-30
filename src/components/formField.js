@@ -102,7 +102,7 @@ export class FormImage extends Component {
                         accepts='image/*'
                         value={undefined}
                         onChange={this.handleSelectedImage}
-                        />
+                />
                 {/* replace button/input goes here */}
             </div>
         )

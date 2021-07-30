@@ -18,9 +18,9 @@ class NewRequest extends Component {
 
         console.log()
 
-        // this.props.createNewRequest(this.props._id, fields, {}, () => {
-        //     this.props.history.push('/dashboard');
-        // })
+        this.props.createNewRequest(this.props._id, fields, formData, () => {
+            this.props.history.push('/dashboard');
+        })
 
     };
 
