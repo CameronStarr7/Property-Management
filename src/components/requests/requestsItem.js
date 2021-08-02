@@ -4,7 +4,7 @@ import Icon from '../../icon';
 import Button from '../../button';
 
 import AnimateHeight from 'react-animate-height';
-
+import { ROOT_URL } from '../../config';
 class RequestsItem extends Component {
 
     constructor()  {
@@ -25,11 +25,13 @@ class RequestsItem extends Component {
     }
 
     render() {
+        const { _id, title, body, date, imageUrl, status } = this.props;
+        const parsedDate = new Date(date);
         return (
             <div id='requests-item' className='requests-item'>
                 <Icon className='requests-item_icon' icon='fas fa-exclamation-triangle'/>
                 <div className='requests-item_title'>
-                    <div className='requests-item_title_text'>My door needs fixing.</div>
+                    <div className='requests-item_title_text'>{title}</div>
                     <Icon callback={() => this.toggleDropdown} className='requests-item_title_arrow' icon='fas fa-sort-down'/>
                 </div>
                 <div className='requests-item_tenant-unit'>
@@ -37,10 +39,14 @@ class RequestsItem extends Component {
                 </div>
                 <Icon className='requests-item_arrow' icon='fas fa-sort-down'/>
                 <div className='requests-item_date'>
-                    04/06/1997
+                    { parsedDate.getMonth() + 1 }
+                    /
+                    { parsedDate.getDate() }
+                    /
+                    { parsedDate.getFullYear() - 2000 } 
                 </div>
 
-                <Button className='requests-item_move' icon='fas fa-wrench' callback={() => } />
+                <Button className='requests-item_move' icon='fas fa-wrench' callback={() => console.log('tryna work?')} />
 
                 <div className='requests-item_description'>
                     <AnimateHeight
@@ -50,13 +56,10 @@ class RequestsItem extends Component {
                         <div className='item-description'>
                             <img 
                                 className='item_description_img'
-                                src = 'http://via.placeholder.com/'
+                                src = {`${ROOT_URL}/${imageUrl}`}
                             />
                             <p className='item_description_text'>
-                                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                                {body}
                             </p>
                         </div>
                     </AnimateHeight>
