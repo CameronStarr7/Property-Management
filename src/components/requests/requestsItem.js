@@ -45,6 +45,7 @@ class RequestsItem extends Component {
             mainIcon = 'fas fa-wrench'
         } else if(status == 'complete') {
             moveButtonIcon = 'fas fa-exclamation-triangle'
+            mainIcon - 'fas fa-check-square'
         }
 
         return (
