@@ -51,3 +51,18 @@ export function fetchRequests() {
             })
     }
 }
+
+export function changeStatus(_id, status) { 
+    const token = localStorage.getItem('token');
+    return function() {
+        axios.get(`${ROOT_URL}/requests/update-status`, {
+            headers: { authorization: token }
+        })
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
