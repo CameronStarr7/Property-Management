@@ -16,7 +16,7 @@ class NewNewsletter extends Component {
         formData.append('body', body);
         formData.append('image', image);
 
-        this.props.createNewRequest(this.props._id, formData, () => {
+        this.props.createNewRequest( formData, () => {
             this.props.history.push('/dashboard');
         })
 
