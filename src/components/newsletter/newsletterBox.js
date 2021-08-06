@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 const months = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -8,8 +7,9 @@ class NewsletterBox extends Component {
     render() {
         const { date } = this.props;
         if(!date) {
-            return <div>...fetching newsletters</div>
+            return <div>fetching...</div>
         }
+        const parsedDate = new Date(date);
         return (
             <div className='newsletter-box'>
                 <div className='newsletter-box_day'>{date.getDate()}</div>
