@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { FormTitle } from '../formTitle';
 import { FormInput, FormButton, FormTextArea, FormImage} from '../formField';
 
+import { ROOT_URL } from '../../config';
+
 class  NewNewsletterForm extends Component {
     render() {
 
@@ -69,6 +71,9 @@ class  NewNewsletterForm extends Component {
                     type="file"
                     title="Image"
                     component = {FormImage}
+                    imageUrl={this.props.initialValues.imageUrl ?
+                    `${this.props.initialValues.imageUrl}` :
+                    'http://via.placeholder.com/150x137'}
                 />
             </form>
         );
