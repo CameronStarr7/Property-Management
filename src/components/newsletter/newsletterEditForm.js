@@ -5,23 +5,14 @@ import { connect } from 'react-redux';
 import { FormTitle } from '../formTitle';
 import { FormInput, FormButton, FormTextArea, FormImage} from '../formField';
 
-class  NewNewsletterForm extends Component {
+class  EditNewsletterForm extends Component {
     render() {
 
-        const { handleSubmit, formTitle, newsletterEdit } = this.props;
+        const { handleSubmit, formTitle } = this.props;
         const { 
             fieldOnePlaceholder, fieldOneTitle,
             fieldTwoPlaceholder, fieldTwoTitle
         } = this.props;
-
-        var title = null;
-        var body = null;
-        var imageUrl = null;
-        if(newsletterToEdit) {
-            title = newsletterEdit.title;
-            body = newsletterToEdit.body;
-            imageUrl = newsletterToEdit.imageUrl;
-        }
 
         return (
             <form onSubmit={handleSubmit} className='new-newsletter-form'>
@@ -33,7 +24,6 @@ class  NewNewsletterForm extends Component {
                     type="text"
                     title={fieldOneTitle}
                     component = {FormInput}
-                    editValue={title ? title : null}
                 />
                 <Field 
                     className="new-newsletter-form_body"
@@ -42,7 +32,6 @@ class  NewNewsletterForm extends Component {
                     type="text"
                     title={fieldTwoTitle}
                     component = {FormTextArea} 
-                    editValue={body ? body : null}
                 />
                 <Field 
                     className="new-newsletter-form_submit"
@@ -75,16 +64,8 @@ class  NewNewsletterForm extends Component {
     }
 }
 
-NewNewsletterForm = reduxForm({
-    form: "newnewsletter"
- }) (NewNewsletterForm);
-
-function mapStateToProps(state) {
-    const { newsletterToEdit } = state.newsletters;
-    return {
-        newsletterToEdit
-    }
-}
-NewNewsletterForm = connect(mapStateToProps)(NewNewsletterForm);
+EditNewsletterForm = reduxForm({
+    form: "editNewsletter"
+ }) (EditNewsletterForm);
  
-export default NewNewsletterForm;
+export default EditNewsletterForm;

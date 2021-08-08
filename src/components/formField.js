@@ -11,8 +11,7 @@ export class FormInput extends Component {
                     className='form-input__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder} 
-                    value={editValue ? editValue : input.value}
+                    placeholder={placeholder}
                 />
             </div>
         )
@@ -29,8 +28,7 @@ export class FormTextArea extends Component {
                     className='form-textarea__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder} 
-                    value={editValue ? editValue : input.value}
+                    placeholder={placeholder}
                 />
                 
                 {/* </textarea> */}
@@ -77,14 +75,14 @@ export class FormImage extends Component {
     }
 
     render() {
-        const { className, title, input, imageUrl } = this.props;
+        const { className, title, input } = this.props;
         return (
             <div className={`${className} form-image`}>
                 <label className='form-image__title'>{title}</label>
                 <img
                     id='newsletter-new-image'
                     className='form-image__image'
-                    src={imageUrl}
+                    //src={imageUrl}
                 />
                 <input
                     className='form-image__replace'
