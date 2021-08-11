@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export function Header() {
+export function Header({ title, subtitle }) {
         
         return (
                 <div className='header'>
@@ -11,8 +11,11 @@ export function Header() {
         )
 }
 
-export default function HeaderBar() {
-        return (
+export default function HeaderBar({hideBar}) {
+
+        if(!hideBar) {
+                return <div></div>
+        } else {
                 <div className='bar'></div>
-        )
+        }
 }
