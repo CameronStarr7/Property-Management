@@ -31,7 +31,7 @@ class Dashboard extends Component {
             ]
         }
     }
-    
+
     handleTabChange = (title) => {
         const tabs = this.state.tabs;
 
