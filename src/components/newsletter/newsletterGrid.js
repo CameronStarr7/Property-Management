@@ -7,14 +7,14 @@ import NewsletterBox from './newsletterBox';
 import NewsletterArchive from './newsletterArchive';
 import NewsletterLatest from './newsletterLatest';
 import Button from '../button';
-import RequireAdmin from '../auth/requireAdmin';
+import RequireAdmin from '../auth/RequireAdmin';
 
 class NewsletterGrid extends Component {
 
     handleAddNewsletter = () => {
         this.props.history.push('/newsletter/new');
     }
-    
+
     componentDidMount() {
         setTimeout(() => {
             this.props.fetchNewsletters();
@@ -25,7 +25,7 @@ class NewsletterGrid extends Component {
         return (
             <div className='newsletter-grid'>
             <RequireAdmin>
-            <Button className='newsletter-grid_button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
+                <Button className='newsletter-grid_button' icon='fas fa-plus' callback={() => this.handleAddNewsletter()}/>
             </RequireAdmin>
             <NewsletterBox {...this.props.latestNewsletter}/> 
             <NewsletterArchive/>

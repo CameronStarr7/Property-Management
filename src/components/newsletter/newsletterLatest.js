@@ -19,7 +19,9 @@ class NewsletterLatest extends Component {
             <div className='newsletter-latest'>
                 <h1 className='newsletter-latest_title'>{title}</h1>
                 <img className='newsletter-latest_image' src={`${ROOT_URL}/${imageUrl}`}/>
-                <Button className='newsletter-latest_button' callback={() => this.handleEdit()} icon='fas fa-pencil-alt'/>
+                <RequireAdmin>
+                    <Button className='newsletter-latest_button' callback={() => this.handleEdit()} icon='fas fa-pencil-alt'/>
+                </RequireAdmin>
                 <div className='newsletter-latest_body'>
                     <p>{body}</p> 
                 </div>
